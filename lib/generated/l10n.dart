@@ -240,10 +240,10 @@ class S {
     );
   }
 
-  /// `Создать`
+  /// `Create`
   String get create {
     return Intl.message(
-      'Создать',
+      'Create',
       name: 'create',
       desc: '',
       args: [],
@@ -295,6 +295,56 @@ class S {
     return Intl.message(
       'Persons',
       name: 'persons',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Man`
+  String get man {
+    return Intl.message(
+      'Man',
+      name: 'man',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No persons found`
+  String get personsListIsEmpty {
+    return Intl.message(
+      'No persons found',
+      name: 'personsListIsEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong :-(`
+  String get somethingWentWrong {
+    return Intl.message(
+      'Something went wrong :-(',
+      name: 'somethingWentWrong',
       desc: '',
       args: [],
     );

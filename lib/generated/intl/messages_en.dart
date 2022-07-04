@@ -31,12 +31,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "alive": MessageLookupByLibrary.simpleMessage("Alive"),
         "auth": MessageLookupByLibrary.simpleMessage("Authorization"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
-        "create": MessageLookupByLibrary.simpleMessage("Создать"),
+        "create": MessageLookupByLibrary.simpleMessage("Create"),
         "dead": MessageLookupByLibrary.simpleMessage("Dead"),
         "dontHaveAnAccountHint":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account yet"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
         "findPerson": MessageLookupByLibrary.simpleMessage("Find a person"),
         "inputErrorCheckLogin":
             MessageLookupByLibrary.simpleMessage("Check login"),
@@ -46,14 +47,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "inputErrorPasswordIsShorterThan": m1,
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "man": MessageLookupByLibrary.simpleMessage("Man"),
         "noData": MessageLookupByLibrary.simpleMessage("No data"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "persons": MessageLookupByLibrary.simpleMessage("Persons"),
+        "personsListIsEmpty":
+            MessageLookupByLibrary.simpleMessage("No persons found"),
         "personsTotal": m2,
         "russian": MessageLookupByLibrary.simpleMessage("Russian"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "somethingWentWrong":
+            MessageLookupByLibrary.simpleMessage("Something went wrong :-("),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Try again"),
         "wrongLoginOrPassword":
             MessageLookupByLibrary.simpleMessage("Wrong login or password")

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:joenaine/constants/app_colors.dart';
 import 'package:joenaine/constants/app_styles.dart';
+import 'package:joenaine/repo/repo_settings.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 import '../generated/l10n.dart';
 import '../widgets/app_nav_bar.dart';
@@ -51,6 +53,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                 ],
                 onChanged: (value) async {
+                  if (value == null) return;
                   if (value == 'ru_RU') {
                     await S.load(
                       const Locale('ru', 'RU'),
@@ -62,6 +65,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     );
                     setState(() {});
                   }
+                  final repoSettings =
+                      Provider.of<RepoSettings>(context, listen: false);
+                  repoSettings.saveLocale(value);
                 },
               )
             ],

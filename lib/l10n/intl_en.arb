@@ -33,10 +33,15 @@
 	"findPerson": "Find a person",
 	"personsTotal": "Total persons: {total}",
 	"dontHaveAnAccountHint": "Don't have an account yet",
-	"create": "Создать",
+	"create": "Create",
 	"error": "Error",
 	"wrongLoginOrPassword": "Wrong login or password",
 	"ok": "Ok",
 	"settings": "Settings",
-	"persons": "Persons"
+	"persons": "Persons",
+	"man": "Man",
+	"male": "Male",
+	"female": "Female",
+	"personsListIsEmpty": "No persons found",
+	"somethingWentWrong": "Something went wrong :-("
 }

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:joenaine/constants/app_assets.dart';
+import 'package:joenaine/repo/repo_settings.dart';
 import 'package:joenaine/ui/login/login_screen.dart';
+import 'package:provider/provider.dart';
+
+import '../generated/l10n.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -24,17 +28,24 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    Future.delayed(
-      const Duration(seconds: 2),
-    ).whenComplete(
-      () {
+    final repoSettings = Provider.of<RepoSettings>(
+      context,
+      listen: false,
+    );
+    repoSettings.init().whenComplete(() async {
+      var defaultLocale = const Locale('ru', 'RU');
+      final locale = await repoSettings.readLocale();
+      if (locale == 'en') {
+        defaultLocale = const Locale('en');
+      }
+      S.load(defaultLocale).whenComplete(() {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
             builder: (context) => const LoginScreen(),
           ),
         );
-      },
-    );
+      });
+    });
     super.initState();
   }
 

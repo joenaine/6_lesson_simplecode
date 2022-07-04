@@ -83,8 +83,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 if (isValidated) {
                                   FocusScope.of(context).unfocus();
                                   formKey.currentState?.save();
-                                  if (login == 'joenaine' &&
-                                      password == '12345678') {
+                                  if (login == 'qwerty' &&
+                                      password == '123456ab') {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
