@@ -17,13 +17,15 @@ class Location {
   final String? url;
   final DateTime? created;
 
-  factory Location.fromJson(Map<String, dynamic> json) => Location(
-        id: json["id"],
-        name: json["name"],
-        type: json["type"],
-        dimension: json["dimension"],
-        residents: json["residents"] == null ? null : List<String>.from(json["residents"]),
-        url: json["url"],
-        created: json["created"] == null ? null : DateTime.parse(json["created"]),
-      );
+  factory Location.fromJson(Map<String, dynamic> json) {
+    return Location(
+      id: json["id"],
+      name: json["name"],
+      type: json["type"],
+      dimension: json["dimension"],
+      residents: json["residents"] == null ? null : List<String>.from(json["residents"]),
+      url: json["url"],
+      created: json["created"] == null ? null : DateTime.parse(json["created"]),
+    );
+  }
 }

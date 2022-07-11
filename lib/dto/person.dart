@@ -31,6 +31,12 @@ class Person {
 
   factory Person.fromJson(Map<String, dynamic>? json) {
     if (json == null) return Person();
+    List<String>? episode = [];
+    if (json["episode"] is List) {
+      for (var item in json["episode"]) {
+        episode.add(item);
+      }
+    }
     return Person(
       id: json["id"],
       name: json["name"],
@@ -39,10 +45,9 @@ class Person {
       type: json["type"],
       gender: json["gender"],
       origin: json["origin"] == null ? null : Location.fromJson(json["origin"]),
-      location:
-          json["location"] == null ? null : Location.fromJson(json["location"]),
+      location: json["location"] == null ? null : Location.fromJson(json["location"]),
       image: json["image"],
-      episode: (json["episode"] as List).map((e) => e as String).toList(),
+      episode: episode,
       url: json["url"],
       created: json["created"] == null ? null : DateTime.parse(json["created"]),
     );

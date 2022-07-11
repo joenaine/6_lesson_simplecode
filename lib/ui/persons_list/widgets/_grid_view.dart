@@ -13,7 +13,7 @@ class _GridView extends StatelessWidget {
     return GridView.count(
       mainAxisSpacing: 20.0,
       crossAxisSpacing: 8.0,
-      childAspectRatio: 0.8,
+      childAspectRatio: 0.78,
       crossAxisCount: 2,
       padding: const EdgeInsets.only(
         top: 12.0,
